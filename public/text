@@ -5,7 +5,7 @@ body{
 
 }
 :root {
-  background-color: #7651a0fe;
+  background-color: #815fa7fe;
 }
 .nav {
   width: 100%;
@@ -17,7 +17,7 @@ body{
   box-sizing: border-box;
   background: #4f00778a; 
   padding: 10px 20px;
-  backdrop-filter: blur(100px); /* Your Blur Effect */
+  backdrop-filter: blur(100px);
   margin: 0;
   transition: all 0.4s ease-in-out;
   position: fixed;
@@ -199,8 +199,6 @@ video{
   position: relative;
   width: fit-content;
   display: inline-block; 
-  background-color: rgb(55, 10, 62);
-  margin-top:1.2rem;
 }
 .suitsButton {
   position: absolute;
@@ -245,8 +243,8 @@ a {
   font-family:'quicksand';
   color:#ffffff;
   text-align: center;
-  font-size:1.1rem;
-  margin:1rem;
+  font-size:1.4rem;
+  
 }
 .footer-container {
   background-color: #0b0312;
