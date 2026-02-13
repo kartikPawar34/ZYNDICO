@@ -26,7 +26,7 @@ function Highend() {
                 </video>
                 <h1 className="video-title">
                     ZYNDICO <br /> 
-                    <span style={{fontSize: '1.2rem', fontFamily:'quicksand', display: 'block'}}>High-End Suits</span>
+                    <span style={{fontSize: '1.2rem',fontFamily:'quicksand', letterSpacing: '1rem',textAlign:'center',display:"block"}}>High-End Suits</span>
                 </h1>
             </div>
             <div className="product-grid">

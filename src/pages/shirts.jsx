@@ -33,7 +33,7 @@ function Shirt() {
                     <source src={myVideo} type="video/mp4" />
                 </video>
                 <h1 className="video-title">ZYNDICO <br/>
-                <span style={{fontSize: '1.2rem',fontFamily:'quicksand', letterSpacing: '0rem',textAlign:'center',fontWeight:"bolder",display:"block"}}>Shirt Collection</span></h1>
+                <span style={{fontSize: '1.2rem',fontFamily:'quicksand', letterSpacing: '1rem',textAlign:'center',display:"block"}}>Shirt Collection</span></h1>
             </div>
 
             <div className="product-grid">

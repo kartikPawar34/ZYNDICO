@@ -8,21 +8,18 @@ const Connect = () => {
         <div className="footer-section">
           <p className="footer-label">CONTACT US</p>
           <a href="https://wa.me/123434546" className="footer-link">
-            <FaWhatsapp /> +919685467114
+            <FaWhatsapp /> +9178949 86863
           </a>
           <a href="mailto:COKEXclub@gmail.com" className="footer-link">
-            <FaEnvelope /> COKEXclub@gmail.com
+            <FaEnvelope /> COKEXCLUB@gmail.com
           </a>
         </div>
-
         <div className="footer-section">
           <p className="footer-label">COUNTRY/REGION</p>
           <p className="footer-link underline"><FaGlobe /> INDIA</p>
         </div>
       </div>
-
       <hr className="footer-divider"/>
-
       <div className="footer-bottom">
         <h2 className="main-footer-logo">ZYNDICO</h2>
          <p className="copyright">

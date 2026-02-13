@@ -17,7 +17,7 @@ function Tshirt() {
         <>
             <div className="shirt-container">
                 <video autoPlay muted loop className="introall"><source src={tshirtVideo} type="video/mp4" /></video>
-                <h1 className="video-title">ZYNDICO <br /> <span style={{fontSize: '1.2rem', fontFamily:'quicksand', display: 'block'}}>Essentials</span></h1>
+                <h1 className="video-title">ZYNDICO <br /> <span style={{fontSize: '1.2rem',fontFamily:'quicksand', letterSpacing: '1rem',textAlign:'center',display:"block"}}>Essentials</span></h1>
             </div>
             <div className="product-grid">
                 {imageCollection.map((item) => (

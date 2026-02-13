@@ -38,12 +38,7 @@ function Shoes() {
                     ZYNDICO 
                     <br /> 
                     <span style={{
-                        fontSize: '1.2rem', 
-                        fontFamily: 'quicksand', 
-                        letterSpacing: '0.5rem', 
-                        textAlign: 'center', 
-                        display: 'block', 
-                        marginTop: '0.5rem'
+                        fontSize: '1.2rem',fontFamily:'quicksand', letterSpacing: '1rem',textAlign:'center',display:"block"
                     }}>
                         Shoes Collection
                     </span>
