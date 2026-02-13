@@ -31,7 +31,7 @@ function Home() {
 
     <div className="suits">
         <h2 className="subheading">THE BHARAT BESPOKE</h2>
-        <p className="subdetail">Where ancestral elegance meets the modern edge. Experience the pinnacle of Indian craftsmanship, tailored for the man who carries his heritage with pride.</p>
+        <p className="subdetail">Where elegance meets the modern edge.</p>
         <img src={suit2} className="latest1" alt="Suit"/>
         <button className="suitsButton"><Link to="/highend">VISIT NOW</Link></button>
     </div>

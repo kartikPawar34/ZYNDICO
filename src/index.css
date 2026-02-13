@@ -380,13 +380,6 @@ a {
 }
 
 @media (min-width: 768px) {
-    .nav {
-        transform: translateY(-100%); 
-    }
-
-    .nav.active {
-        transform: translateY(0);
-    }
     .latest, .latest1 {
         filter: grayscale(100%);
     }
