@@ -43,7 +43,6 @@ body{
 
 .spacer { width: 30px; }
 
-/* Collapse Logic */
 .nav-collapse {
     max-height: 0;
     overflow: hidden;
@@ -476,7 +475,7 @@ a {
   }
 
   .video-title {
-    font-size: 8.6rem;
+    font-size: 7.6rem;
     letter-spacing: 3rem;
   }
 
@@ -621,5 +620,10 @@ a {
     font-size:2rem;
     font-family:"quicksand";
     letter-spacing:2rem;
+  }
+}
+@media (min-width: 512px){
+  .video-title{
+    font-size:6rem;
   }
 }
