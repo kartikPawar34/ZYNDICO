@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
 import myVideo from "../assets/videos/intro.mp4";
-import shirt7 from "../shirt/7.jpg";
-import t_shirt8 from "../t-shirt/7.jpg";
-import suit2 from "../suit/3.jpg";
-import shoes4 from "../shoes/4.jpg";
-import shoes5 from "../sneaker/8.jpg";
+import shirt7 from "../assets/images/shirt/7.jpg";
+import t_shirt8 from "../assets/images/t-shirt/7.jpg";
+import suit2 from "../assets/images/suit/3.jpg";
+import shoes4 from "../assets/images/shoes/4.jpg";
+import shoes5 from "../assets/images/sneaker/8.jpg";
 
 
 function Home() {
