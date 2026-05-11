@@ -9,6 +9,7 @@ body {
   padding: 0;
   overflow-x: hidden;
   font-family: 'Times New Roman', Times, serif;
+<<<<<<< HEAD
 
 }
 
@@ -19,6 +20,101 @@ a {
 }
 
 
+=======
+
+}
+
+a {
+  text-decoration: none;
+  font-family: 'Times New Roman', Times, serif;
+  color: #000;
+}
+
+/* --- Navigation --- */
+.nav {
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  flex-direction: column; 
+  box-sizing: border-box;
+  background: #011d12c7; 
+  padding: 10px 20px;
+  backdrop-filter: blur(100px); 
+  position: fixed;
+  transition: all 0.4s ease-in-out;
+}
+
+.nav-container { width: 100%; }
+
+.nav-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo1 {
+  color: goldenrod;
+  font-family: 'Times New Roman', Times, serif;
+  letter-spacing: 0.3rem;
+  font-size:100%;
+  font-weight: 400;
+  margin: 0;
+}
+
+.nav-button {
+  width: 100%;
+  padding: 1rem;
+  background-color: transparent;
+  border: none;
+  font-family: "Quicksand", sans-serif;
+  font-size: 1.1rem;
+  color: goldenrod;
+  transition: ease-in 0.2s;
+  cursor: pointer;
+}
+
+.nav-button:hover {
+  background: rgba(0, 26, 8, 0.996);
+}
+
+.menu-icon {
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+  width: 30px;
+}
+
+.nav-collapse {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s cubic-bezier(0, 1, 0, 1);
+}
+
+.nav-collapse.show {
+  max-height: 1000px;
+  transition: max-height 1s ease-in-out;
+  padding-top: 20px;
+}
+
+.nav-links {
+  list-style: none;
+  padding: 0 0 20px 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.nav-links a {
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.9rem;
+}
+
+>>>>>>> 9f22d424e42c7defd09b3b493e66af3324585a43
 /* --- Video & Hero Sections --- */
 .shirt-container, .video-wrapper {
   position: relative; 
@@ -26,6 +122,10 @@ a {
   height: 100vh;
   overflow: hidden;
   display: flex;
+<<<<<<< HEAD
+=======
+  justify-content: center;
+>>>>>>> 9f22d424e42c7defd09b3b493e66af3324585a43
   align-items: center;
 }
 
@@ -48,14 +148,22 @@ a {
 .video-title {
   position: relative;
   z-index: 2;
+<<<<<<< HEAD
   color: rgb(255, 255, 255);
   font-family: 'Times New Roman', Times, serif;
+=======
+  color: goldenrod;
+  font-family: 'Times New Roman', Times, serif;
+  letter-spacing: 1.5rem;
+  text-transform: uppercase;
+>>>>>>> 9f22d424e42c7defd09b3b493e66af3324585a43
   pointer-events: none;
   font-weight: 400;
   font-size: 3rem;
   padding-left: 1.5rem; 
   animation: fadeIn 2s ease-out forwards;
 }
+<<<<<<< HEAD
 .description{
   z-index:3;
 }
@@ -63,6 +171,13 @@ a {
   from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
 }
+=======
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+>>>>>>> 9f22d424e42c7defd09b3b493e66af3324585a43
 
 /* --- Product Sections (Latest) --- */
 .src1 {
@@ -179,13 +294,21 @@ a {
 }
 
 .product-info {
+<<<<<<< HEAD
   padding:0.7rem 0.5rem 0.7rem 0.5rem;
+=======
+  margin:1rem 0rem 1rem 0rem ;
+  padding:0rem 0.5rem 0rem 0.5rem;
+>>>>>>> 9f22d424e42c7defd09b3b493e66af3324585a43
   display: flex;
   align-items: center;      
   justify-content: space-between; 
   width: 100%;
   box-sizing: border-box; 
+<<<<<<< HEAD
   background:rgba(12, 12, 12, 0.582);
+=======
+>>>>>>> 9f22d424e42c7defd09b3b493e66af3324585a43
 }
 
 .price { color: #e4e4e4;font-size:0.6rem; font-family:Arial, Helvetica, sans-serif; text-align: right;font-weight:100;}
@@ -195,7 +318,11 @@ a {
 .footer-container {
   background-color: #00160e;
   color: #fff;
+<<<<<<< HEAD
   padding: 2rem 1rem 1rem 1rem;
+=======
+  padding: 4rem 2rem 2rem 2rem;
+>>>>>>> 9f22d424e42c7defd09b3b493e66af3324585a43
   margin-top: 4rem;
   display: flex;
   flex-direction: column;
@@ -222,7 +349,11 @@ a {
 .main-footer-logo { color:goldenrod;font-size: 3rem; margin-top: 2rem; letter-spacing: 15px; font-weight: 400; }
 .copyright { font-size: 0.7rem; color: #666; }
 .enterinfo{
+<<<<<<< HEAD
   border:1px solid #858585;
+=======
+  border:1px solid #ffffff;
+>>>>>>> 9f22d424e42c7defd09b3b493e66af3324585a43
   border-radius:5px;
   padding:0.2rem;
 }
@@ -252,4 +383,8 @@ a {
   .video-title { font-size: 12rem; letter-spacing: 5rem; }
   .subdetail { top: 30%; }
   .linking { margin: 2rem; height: 4rem; width: 15rem; }
+<<<<<<< HEAD
 } 
+=======
+}
+>>>>>>> 9f22d424e42c7defd09b3b493e66af3324585a43

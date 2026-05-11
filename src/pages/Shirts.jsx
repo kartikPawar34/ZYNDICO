@@ -33,7 +33,7 @@ function Shirt() {
                     <source src={myVideo} type="video/mp4" />
                 </video>
                 <h1 className="video-title">ZYNDICO <br/>
-                <span style={{fontSize: '1.2rem',fontFamily:'quicksand', letterSpacing: '1rem',textAlign:'center',display:"block"}}>Shirt Collection</span></h1>
+                <span style={{fontSize: '1.2rem',fontFamily:'quicksand', letterSpacing: '0.3rem',textAlign:'center',display:"block"}}>Shirt Collection</span></h1>
             </div>
 
             <div className="product-grid">
@@ -43,8 +43,13 @@ function Shirt() {
                             <img src={item.src} alt={item.name} />
                         </div>
                         <div className="product-info">
+<<<<<<< HEAD
                             <h3>{item.name}</h3>
                             <p className="price">{item.price}</p>
+=======
+                            <h4>{item.name}</h4>
+                            <h2 className="price">{item.price}</h2>
+>>>>>>> 9f22d424e42c7defd09b3b493e66af3324585a43
                         </div>
                     </div>
                 ))}
