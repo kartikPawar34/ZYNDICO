@@ -13,7 +13,6 @@ const shoeDetails = {
     "8.jpg": { name: "Urban Explorer Highs", price: "Rs 5,500" },
 };
 
-// 3. Merge Logic
 const imageCollection = Object.entries(importedImages).map(([path, module], index) => {
     const fileName = path.split('/').pop(); 
     const details = shoeDetails[fileName] || { name: "Premium Footwear", price: "Rs 4,999" };
@@ -35,14 +34,10 @@ function Shoes() {
                     Your browser does not support the video tag.
                 </video>
                 <h1 className="video-title">
-                    ZYNDICO 
-                    <br /> 
-                    <span style={{
-                        fontSize: '1.2rem',fontFamily:'quicksand', letterSpacing: '1rem',textAlign:'center',display:"block"
-                    }}>
-                        Shoes Collection
-                    </span>
+                    LuxeMotion 
                 </h1>
+                <br/>
+                <p className="description"  id="product-description">Crafted for men with a taste for understated luxury, blending minimal design with bold accents.</p>
             </div>
 
             <div className="product-grid">
@@ -54,7 +49,6 @@ function Shoes() {
                         <div className="product-info">
                             <h3>{item.name}</h3>
                             <p className="price">{item.price}</p>
-                            <button className="buy-btn">Add to Cart</button>
                         </div>
                     </div>
                 ))}

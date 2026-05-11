@@ -45,7 +45,6 @@ function Shirt() {
                         <div className="product-info">
                             <h3>{item.name}</h3>
                             <p className="price">{item.price}</p>
-                            <button className="buy-btn">Add to Cart</button>
                         </div>
                     </div>
                 ))}

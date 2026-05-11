@@ -32,14 +32,13 @@ function Navbar() {
                 <div className="nav-header">
                     {/* Burger / Toggle */}
                     <div className="menu-icon" onClick={() => setIsOpen(!isOpen)}>
-                        {isOpen ? "✕" : "⋮"}
+                        {isOpen ? "✕" : "☰"}
                     </div>
 
                     <Link to="/" className="logo-link" onClick={() => setIsOpen(false)}>
-                        <h2 className="logo1">ZYNDICO</h2>
+                        <h1 className="logo1">ZYNDICO</h1>
                     </Link>
-
-                    <div className="spacer"></div>
+                 <button className='menu'><div className="menu1"></div><div className="menu2"></div></button>
                 </div>
 
                 <div className={`nav-collapse ${isOpen ? 'show' : ''}`}>
