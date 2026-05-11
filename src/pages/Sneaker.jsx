@@ -1,4 +1,3 @@
-import sneakVideo from "../assets/videos/sneakers.mp4";
 const importedImages = import.meta.glob("../assets/images/sneaker/*.jpg", { eager: true });
 
 const sneakDetails = {
@@ -16,9 +15,9 @@ function Sneaker() {
     return (
         <>
             <div className="shirt-container">
-                <video autoPlay muted loop className="introall"><source src={sneakVideo} type="video/mp4" /></video>
-                <h1 className="video-title">ZYNDICO <br /> <span style={{fontSize: '1.2rem',fontFamily:'quicksand', letterSpacing: '1rem',textAlign:'center',display:"block"}}>Sneaker Drop</span></h1>
+                <h1 className="title">Velour Kicks</h1>
             </div>
+            <p className="description"  id="product-description">Designed for men who move seamlessly from boardroom to street, combining comfort with modern style.</p>
             <div className="product-grid">
                 {imageCollection.map((item) => (
                     <div key={item.id} className="product-card">

@@ -1,4 +1,3 @@
-import myVideo from "../assets/videos/shoes.mp4";
 
 const importedImages = import.meta.glob("../assets/images/shoes/*.jpg", { eager: true });
 
@@ -29,14 +28,9 @@ function Shoes() {
     return (
         <>
             <div className="shirt-container">
-                <video autoPlay muted loop playsInline id="myVideo" className="introall">
-                    <source src={myVideo} type="video/mp4" />
-                    Your browser does not support the video tag.
-                </video>
-                <h1 className="video-title">
+                <h1 className="title">
                     LuxeMotion 
                 </h1>
-                <br/>
                 <p className="description"  id="product-description">Crafted for men with a taste for understated luxury, blending minimal design with bold accents.</p>
             </div>
 

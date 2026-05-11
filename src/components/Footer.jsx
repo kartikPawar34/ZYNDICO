@@ -13,11 +13,7 @@ const Footer = () => {
                     provided in our Privacy Policy, which outlines our
                     commitment to handling your personal concierge data and
                     style preferences with the highest level of discretion.</p>
-<<<<<<< HEAD
                     <input type="email" placeholder='Enter Email' className='enterinfo'></input>
-=======
-                    <input type="email" placeholder='Enter E-mail' className='enterinfo'></input>
->>>>>>> 9f22d424e42c7defd09b3b493e66af3324585a43
                 <p className="footer-label">CONTACT US</p>
                 <a href="https://wa.me/123434546" className="footer-link">
                   <FaWhatsapp /> 7614056695

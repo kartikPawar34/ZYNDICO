@@ -20,7 +20,7 @@ a {
 
 
 /* --- Video & Hero Sections --- */
-.shirt-container, .video-wrapper {
+ .video-wrapper {
   position: relative; 
   width: 100%;
   height: 100vh;
@@ -29,7 +29,29 @@ a {
   align-items: center;
 }
 
-.shirt-container { background-color: #305842; }
+.shirt-container {
+   background: linear-gradient(180deg,#001407fe,#1a0000fe);
+   background-image:url("https://i.pinimg.com/736x/24/62/de/2462de1626b106f87665cd30dfa01bd5.jpg");
+   width: 100%;
+   height: 100vh;
+   padding:5rem 0rem 0rem 0rem;
+   z-index:0;
+   flex-direction: column;
+   display:flex;
+}
+.discrip{
+   padding:1rem 0rem 5rem 1rem;
+   text-align:left;
+   color: #fdfdfd;
+   margin-top: auto;
+   background:linear-gradient(180deg,#0000001a,#0c0c0cfe);
+   height:7rem;
+}
+.title{
+  padding:0rem 0rem 0rem 1rem;
+  font-size:3rem;
+  color:#fdfdfd;
+}
 
 .intro, .introall {
   position: absolute;
@@ -48,13 +70,14 @@ a {
 .video-title {
   position: relative;
   z-index: 2;
-  color: rgb(255, 255, 255);
+  color:goldenrod;
   font-family: 'Times New Roman', Times, serif;
   pointer-events: none;
   font-weight: 400;
   font-size: 3rem;
   padding-left: 1.5rem; 
   animation: fadeIn 2s ease-out forwards;
+  align-items:center;
 }
 .description{
   z-index:3;
@@ -179,7 +202,7 @@ a {
 }
 
 .product-info {
-  padding:0.7rem 0.5rem 0.7rem 0.5rem;
+  padding:0.9rem 0.5rem 0.9rem 0.5rem;
   display: flex;
   align-items: center;      
   justify-content: space-between; 

@@ -37,8 +37,6 @@
   backdrop-filter: blur(100px); 
   position: fixed;
   transition: all 0.4s ease-in-out;
-  border-radius:12rem;
-  margin:0.3rem 0.5rem 0.1rem 0.1rem;
 }
 
 .nav-container { width: 100%; }
@@ -60,14 +58,12 @@
 
 .nav-button {
   width: 100%;
-  padding: 1rem;
-  background-color: transparent;
-  border: none;
   font-family: "Quicksand", sans-serif;
-  font-size: 1.1rem;
+  font-size: 0.8rem;
   color: goldenrod;
   transition: ease-in 0.2s;
   cursor: pointer;
+  text-align:left;
 }
 
 .nav-button:hover {
@@ -76,7 +72,7 @@
 
 .menu-icon {
   color: goldenrod;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   cursor: pointer;
   width: 30px;
 }

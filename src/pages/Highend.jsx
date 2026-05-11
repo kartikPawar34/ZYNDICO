@@ -1,5 +1,3 @@
-import myVideo from "../assets/videos/suit.mp4";
-import compvideo from "../assets/videos/fsuit.mp4";
 
 const importedImages = import.meta.glob("../assets/images/suit/*.jpg", { eager: true });
 
@@ -21,13 +19,10 @@ function Highend() {
     return (
         <>
             <div className="shirt-container">
-                <video autoPlay muted loop className="introall "> 
-                    <source src={myVideo} type="video/mp4" />
-                </video>
-                <h1 className="video-title">
-                    ZYNDICO <br /> 
-                    <span style={{fontSize: '1.2rem',fontFamily:'quicksand', letterSpacing: '1rem',textAlign:'center',display:"block"}}>High-End Suits</span>
+                <h1 className="title">
+                    Velour Vision
                 </h1>
+                <p className="discrip">Designed for evenings that demand luxury, where fabric and fit speak louder than words.</p>
             </div>
             <div className="product-grid">
                 {imageCollection.map((item) => (
