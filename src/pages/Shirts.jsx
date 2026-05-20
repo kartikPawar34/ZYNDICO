@@ -27,8 +27,19 @@ const imageCollection = Object.entries(importedImages).map(([path, module], inde
 function Shirt() {
     return (
         <>
-            <div className="shirt-container">
-                <h1 className="title">Metro Ease </h1>
+          <div 
+                className="shirt-container"  
+                style={{ 
+                    backgroundImage: 'url(https://i.pinimg.com/736x/c6/87/9b/c6879bea30a9ebae2a96a733c423b2ae.jpg)',
+                    backgroundRepeat: 'no-repeat',
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center',
+                    minHeight: '100vh'
+                }}
+>                <h1 className="title" style={{ 
+                    color: "#040404"
+                }}>
+                    Metro Ease </h1>
                 <p className="discrip">Engineered for the modern man. Experience breathable, all-day comfort that moves with you, designed with an uncompromising eye for style.</p>
             </div>
 

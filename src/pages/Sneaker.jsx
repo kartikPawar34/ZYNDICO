@@ -14,10 +14,20 @@ const imageCollection = Object.entries(importedImages).map(([path, module], inde
 function Sneaker() {
     return (
         <>
-            <div className="shirt-container">
-                <h1 className="title">Velour Kicks</h1>
+          <div 
+                className="shirt-container"  
+                style={{ 
+                    backgroundImage: 'url(https://i.pinimg.com/736x/a8/b2/91/a8b2913dfd6a02e10089690081864178.jpg)',
+                    backgroundRepeat: 'no-repeat',
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center',
+                    minHeight: '100vh'
+                }}
+>                <h1 className="title">
+                    Velour Kicks
+                </h1>
+                <p className="discrip">Designed for men who move seamlessly from boardroom to street, combining comfort with modern style.</p>
             </div>
-            <p className="description"  id="product-description">Designed for men who move seamlessly from boardroom to street, combining comfort with modern style.</p>
             <div className="product-grid">
                 {imageCollection.map((item) => (
                     <div key={item.id} className="product-card">

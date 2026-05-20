@@ -15,8 +15,20 @@ const imageCollection = Object.entries(importedImages).map(([path, module], inde
 function Hoodies() {
     return (
         <>
-            <div className="shirt-container">
-                <h1 className="title">ZYNDICO</h1>
+           <div 
+                className="shirt-container"  
+                style={{ 
+                    backgroundImage: 'url(https://i1-c.pinimg.com/1200x/35/74/7e/35747ed4d30ed8fbbd0bd2da87bd6dcd.jpg)',
+                    backgroundRepeat: 'no-repeat',
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center',
+                    minHeight: '100vh'
+                }}
+>
+                <h1 className="title">Zyndico Hoodies</h1>
+                <p className="discrip">
+                    Crafted from a heavy-weight cotton blend, it offers that coveted boxy, oversized silhouette without feeling bulky. Whether you're hitting the city streets.
+            </p>
             </div>
             <div className="product-grid">
                 {imageCollection.map((item) => (

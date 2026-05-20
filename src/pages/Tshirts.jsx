@@ -14,10 +14,22 @@ const imageCollection = Object.entries(importedImages).map(([path, module], inde
 function Tshirt() {
     return (
         <>
-            <div className="shirt-container">
-                <h1 className="title">Nova Line </h1>
+          <div 
+                className="shirt-container"  
+                style={{ 
+                    backgroundImage: 'url(https://i1-c.pinimg.com/736x/04/9d/c2/049dc2815f092ce563d3feef41e63aec.jpg)',
+                    backgroundRepeat: 'no-repeat',
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center',
+                    minHeight: '100vh'
+                }}
+>                <h1 className="title" style={{ 
+                    color: "goldenrod"
+                }}
+                >Nova Line </h1>
+                <p className="discrip">Built for men who push limits, combining performance fabrics with casual versatility.</p>
+
             </div>
-            <p className="title">Built for men who push limits, combining performance fabrics with casual versatility.</p>
             <div className="product-grid">
                 {imageCollection.map((item) => (
                     <div key={item.id} className="product-card">
