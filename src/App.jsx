@@ -27,6 +27,9 @@ function App() {
         <Route path="/shoes" element={<Shoes />} />
         <Route path="/highend" element={<Highend />} />
         <Route path="/ProductPage" element={<ProductPage />} />
+        <Route path="/Login" element={<Loginuser/>}/>
+        <Route path="/Register" element={<Registeruser/>}/>
+        <Route path="/ForgetPass" element={<ForgetPass/>}/>
       </Routes>
       <Footer />
     </div>

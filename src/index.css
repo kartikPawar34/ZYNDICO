@@ -27,9 +27,8 @@ a {
   align-items: center;
 }
 .subheading { 
-  font-size:4rem;
+  font-size:2.3rem;
   top:3%; 
-  color:goldenrod;
 }
 .shirt-container {
    background: linear-gradient(180deg,#001407fe,#1a0000fe);
@@ -143,7 +142,7 @@ a {
   position: absolute;
   z-index: 5;
   text-align: center;
-  color: #fff;
+  color: rgb(22, 16, 0);
 }
 
 .subdetail {
@@ -231,8 +230,8 @@ a {
   font-size:0.8rem;
 }
 
-.footer-section { display: flex; flex-direction: column; gap: 1rem; }
-.footer-label { font-size: 0.8rem; color: #888; }
+.footer-section { display: flex; flex-direction: column; gap: 1rem;  font-family: "Montserrat Alternates", sans-serif; }
+.footer-label { font-size: 0.8rem; color: goldenrod; font-family: 'Times New Roman', Times, serif;}
 .footer-link { color: #fff; display: flex; align-items: center; gap: 10px; transition: 0.3s; font-size:0.8rem; }
 .footer-link:hover { opacity: 0.7; }
 .footer-divider { border: 0; border-top: 1px solid #333; margin: 2rem 0; width: 100%; }

@@ -38,7 +38,12 @@ function Navbar() {
                     <Link to="/" className="logo-link" onClick={() => setIsOpen(false)}>
                         <h1 className="logo1">ZYNDICO</h1>
                     </Link>
-                 <button className='menu'><div className="menu1"></div><div className="menu2"></div></button>
+                    <Link to="/Login" onClick={() => setIsOpen(false)}>
+                        <div className='menu'>
+                            <div className="menu1"></div>
+                            <div className="menu2"></div>
+                        </div>
+                    </Link>
                 </div>
 
                 <div className={`nav-collapse ${isOpen ? 'show' : ''}`}>
