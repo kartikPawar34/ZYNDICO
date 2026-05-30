@@ -9,10 +9,10 @@ import Shoes from "./pages/Shoes";
 import Highend from "./pages/Highend";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
-import ProductPage from "./components/productpage.";
 import ForgetPass from "./Authentication/froget";
 import Registeruser from "./Authentication/register";
 import Loginuser from "./Authentication/login";
+import ProductDetails from "./pages/ProductDetails";
 
 function App() {
   return (
@@ -26,10 +26,10 @@ function App() {
         <Route path="/sneakers" element={<Sneaker />} />
         <Route path="/shoes" element={<Shoes />} />
         <Route path="/highend" element={<Highend />} />
-        <Route path="/ProductPage" element={<ProductPage />} />
         <Route path="/Login" element={<Loginuser/>}/>
         <Route path="/Register" element={<Registeruser/>}/>
         <Route path="/ForgetPass" element={<ForgetPass/>}/>
+        <Route path="/ProductPage/:id" element={<ProductDetails/>}/>
       </Routes>
       <Footer />
     </div>
