@@ -1,3 +1,4 @@
+import './component.css'
 import React from 'react'
 import { FaWhatsapp, FaEnvelope, FaGlobe } from 'react-icons/fa'; // Install react-icons
 
