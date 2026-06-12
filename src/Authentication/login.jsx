@@ -9,8 +9,12 @@ function Loginuser(){
               <input type="email" placeholder="Enter Email" className="enterinfo"></input><br/>
               <input type="Password" placeholder="Enter Password" className="enterinfo"></input>
           </form>
-          <p style={{marginTop:"20px",marginRight:"15px",fontSize:"15px",textAlign:"right"}}>Forgot Password</p>
-          <Link to="/Register"><button className="google-btn">click</button></Link>
+          <Link to="/forgetpass">
+          <p style={{marginTop:"20px",marginRight:"15px",fontSize:"15px",textAlign:"right",color:"#ddd",cursor:"pointer"}}>
+            Forgot Password
+          </p>
+          </Link>
+          <Link to="/Register"><button className="google-btn">Countinue with google</button></Link>
       </div>
     </>
   )

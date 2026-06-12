@@ -32,6 +32,7 @@ function App() {
         <Route path="/ProductPage/:id" element={<ProductDetails/>}/>
       </Routes>
       <Footer />
+      <button className="to-top" className="to-top" onClick={() => window.scrollTo({top:0 , behavior:"smooth"})}>↑</button>
     </div>
   );
 }

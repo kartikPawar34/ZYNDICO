@@ -7,8 +7,8 @@ const Footer = () => {
     <div className="footer-container">
       <div className="footer-content">
               <div className="footer-section">
-                <h2>SIGN-UP FOR CONTENT</h2>
-                <p>By entering your email address below, you consent to
+                <h2 className='footerheading'>SIGN-UP FOR CONTENT</h2>
+                <p className='footercontent'>By entering your email address below, you consent to
                     receiving our newsletter with access to our latest
                     collections, events, and initiatives. More details on this are
                     provided in our Privacy Policy, which outlines our

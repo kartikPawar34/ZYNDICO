@@ -1,8 +1,8 @@
 const importedImages = import.meta.glob("../assets/images/t-shirt/*.jpg", { eager: true });
 
 const details = {
-    "1.jpg": { name: "Boxy Fit Basic", price: "Rs 999" },
-    "2.jpg": { name: "Graphic Drop Shoulder", price: "Rs 1,299" },
+    "1.jpg": { name: "Boxy  Basic", price: "Rs 999" },
+    "2.jpg": { name: "Graphic Shoulder", price: "Rs 1,299" },
 };
 
 const imageCollection = Object.entries(importedImages).map(([path, module], index) => {

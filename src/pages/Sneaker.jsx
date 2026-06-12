@@ -26,7 +26,7 @@ function Sneaker() {
 >                <h1 className="title">
                     Velour Kicks
                 </h1>
-                <p className="discrip">Designed for men who move seamlessly from boardroom to street, combining comfort with modern style.</p>
+                <p className="discrip">Designed for men who move seamlessly from boardroom to street, combining comfort with modern style.Comfort engineered for the pace of today, blending sharp design with effortless wearability.</p>
             </div>
             <div className="product-grid">
                 {imageCollection.map((item) => (

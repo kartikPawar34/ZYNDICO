@@ -32,9 +32,9 @@
   z-index: 10;
   display: flex;
   flex-direction: column; 
-  background: #00140c9f; 
+  background: #00110ade; 
   padding:5px 10px;
-  backdrop-filter: blur(100px); 
+  backdrop-filter: blur(50px); 
   position: fixed;
   transition: all 0.4s ease-in-out;
 }
@@ -58,7 +58,7 @@
 
 .nav-button {
   width: 100%;
-  font-family: "Quicksand", sans-serif;
+  font-family: "Montserrat Alternates", sans-serif;
   font-size: 0.8rem;
   color: goldenrod;
   transition: ease-in 0.2s;
@@ -103,4 +103,68 @@
   text-transform: uppercase;
   letter-spacing: 2px;
   font-size: 0.9rem;
+}
+
+@media (min-width: 540px) {
+  .nav {
+    padding: 8px 12px;
+  }
+  .logo1 {
+    font-size: 2rem;
+    letter-spacing: 0.15rem;
+  }
+  .menu-icon {
+    font-size: 2rem;
+  }
+  .menu {
+    width: 2.4rem;               
+    height: 2.3rem;    
+  }
+  .marquee-container {
+    overflow: hidden;
+    width: 100%;
+    background: #000a07f5; 
+    border-top: 1px solid goldenrod;
+    border-bottom: 1px solid goldenrod;
+    padding: 1.2rem 0;
+    display: flex;
+    user-select: none;
+  }
+
+  .marquee-track {
+    display: flex;
+    width: max-content;
+    animation: scrollMarquee 25s linear infinite;
+  }
+
+  .marquee-track:hover {
+    animation-play-state: paused;
+  }
+
+  .marquee-item {
+    font-family: "Montserrat Alternates", sans-serif;
+    font-size: clamp(0.8rem, 1.5vw, 0.8rem);
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 400;
+    letter-spacing: 6px;
+    padding: 0 4rem; 
+    transition: color 0.3s ease, transform 0.3s ease;
+    white-space: nowrap;
+    display: inline-block;
+  }
+
+  .marquee-item:hover {
+    color: goldenrod;
+    transform: scale(1.05);
+  }
+
+  @keyframes scrollMarquee {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
 }

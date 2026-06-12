@@ -8,16 +8,16 @@ body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
-  font-family: 'Times New Roman', Times, serif;
+  font-family: "Belleza", sans-serif;
 
 }
+
 a {
   text-decoration: none;
-  font-family: 'Times New Roman', Times, serif;
+  font-family: "Belleza", sans-serif;
   color: #000;
 }
 
-/* --- Video & Hero Sections --- */
  .video-wrapper {
   position: relative; 
   width: 100%;
@@ -26,10 +26,13 @@ a {
   display: flex;
   align-items: center;
 }
+
 .subheading { 
-  font-size:2.3rem;
-  top:3%; 
+  font-size:3rem;
+  top:5%; 
+  color:#ffff;
 }
+
 .shirt-container {
    background: linear-gradient(180deg,#001407fe,#1a0000fe);
    width: 100%;
@@ -39,18 +42,25 @@ a {
    flex-direction: column;
    display:flex;
 }
+
 .discrip{
-   padding:1rem 0rem 5rem 1rem;
+   padding:2rem 1rem;
    text-align:left;
    color: #fdfdfd;
    margin-top: auto;
-   background:linear-gradient(180deg,#0000001a,#0c0c0cfe);
-   height:7rem;
+   background: linear-gradient( 180deg,rgba(0, 0, 0, 0) 0%,rgba(12, 12, 12, 0.562) 40%,rgba(12, 12, 12, 0.822) 70% );
+   height:auto;
+   font-family: "Montserrat Alternates", sans-serif;
+   font-size:0.8rem;
+   display:flex;
+   justify-content: center;
+   align-items:center;
 }
+
 .title{
   padding:0rem 0rem 0rem 1rem;
   font-size:3rem;
-  color:#bdbdbd;
+  color:#bdbdbd;  
 }
 
 .intro, .introall {
@@ -71,7 +81,7 @@ a {
   position: relative;
   z-index: 2;
   color:goldenrod;
-  font-family: 'Times New Roman', Times, serif;
+  font-family: "Belleza", sans-serif;
   pointer-events: none;
   font-weight: 400;
   font-size: 4rem;
@@ -80,30 +90,40 @@ a {
   margin:auto;
   letter-spacing:1rem;
 }
+
+.suit-mobile {
+    display: block;
+}
+.suit-desktop {
+    display: none;
+}
+
 .description{
   z-index:3;
 }
+
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* --- Product Sections (Latest) --- */
 .src1 {
-  display: flex;         
-  justify-content: center;
-  align-items: flex-start; 
-  gap: 0.5rem;            
+  display: grid; 
+  grid-template-columns: repeat(2, 1fr); 
+  grid-template-rows: 1fr;             
   width: 100%;
-  margin: 3rem 0; 
 }
-
+.heading{
+  font-size:2rem;
+  text-align: center;
+  margin:1rem;
+}
 .latest {
-  width: 50%;          
   display: flex;
   flex-direction: column;
   align-items: center;
   cursor: pointer;
+  margin-bottom:1rem;
 }
 
 .latest img {
@@ -114,11 +134,12 @@ a {
 
 .product-name {
   color: #fff;
-  font-size: 1.2rem;
+  font-size: 0.8rem;
   margin-top: 0.5rem;
+  font-family: "Montserrat ", sans-serif;
 }
 
-/* --- Suits Section (Full Width) --- */
+
 .suits {
   width: 100vw;
   position: relative;
@@ -142,7 +163,7 @@ a {
   position: absolute;
   z-index: 5;
   text-align: center;
-  color: rgb(22, 16, 0);
+  color: rgb(247, 247, 247);
 }
 
 .subdetail {
@@ -176,7 +197,6 @@ a {
   z-index: 5;
 }
 
-/* --- Product Grid --- */
 .product-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -204,14 +224,15 @@ a {
   width: 100%;
   box-sizing: border-box; 
   background:rgba(12, 12, 12, 0.582);
+  font-family: "Montserrat Alternates", sans-serif;
 }
 
-.price { color: #e4e4e4;font-size:0.6rem; font-family:Arial, Helvetica, sans-serif; text-align: right;font-weight:100;}
+.price { color:goldenrod;font-size:0.8rem; font-family: "Montserrat Alternates", sans-serif;text-align: right;font-weight:100;}
 
 
 /* --- Footer --- */
 .footer-container {
-  background-color: #00160e;
+  background-color: #000f09;
   color: #fff;
   padding: 2rem 1rem 1rem 1rem;
   margin-top: 4rem;
@@ -230,46 +251,191 @@ a {
   font-size:0.8rem;
 }
 
+.footerheading{
+  color:goldenrod;
+  font-family: "Belleza", sans-serif;
+  font-size:1.2rem;
+}
+.to-top {
+  border: 1px solid goldenrod;
+  color: goldenrod;
+  background: rgb(0, 17, 1);
+  border-radius: 1rem;
+  padding: 0.2rem 0.7rem;
+  margin: 0.5rem;
+  z-index: 5;
+  position: fixed;  
+  bottom: 10px;     
+  right: 5px;     
+  cursor:pointer;
+}
+.to-top:hover{
+  color:rgb(6, 15, 0);
+  background:goldenrod;
+}
+
 .footer-section { display: flex; flex-direction: column; gap: 1rem;  font-family: "Montserrat Alternates", sans-serif; }
-.footer-label { font-size: 0.8rem; color: goldenrod; font-family: 'Times New Roman', Times, serif;}
+.footer-label { font-size: 0.8rem; color: goldenrod;  font-family: "Belleza", sans-serif;
+}
 .footer-link { color: #fff; display: flex; align-items: center; gap: 10px; transition: 0.3s; font-size:0.8rem; }
 .footer-link:hover { opacity: 0.7; }
 .footer-divider { border: 0; border-top: 1px solid #333; margin: 2rem 0; width: 100%; }
 .footer-bottom { text-align: center; display: flex; flex-direction: column; align-items: center; gap: 1.5rem; }
 .footer-logos { display: flex; gap: 3rem; letter-spacing: 3px; font-size: 0.9rem; }
 .main-footer-logo { color:goldenrod;font-size: 3rem; margin-top: 2rem; letter-spacing: 15px; font-weight: 400; }
-.copyright { font-size: 0.7rem; color: #666; }
+.copyright { font-size: 0.7rem; color: #666; font-family:'Times New Roman', Times, serif;}
 .enterinfo{
   border:1px solid #858585;
   border-radius:5px;
   padding:0.2rem;
 }
 
-/* --- Responsive Media Queries --- */
+@media (min-width: 540px) {
+  .video-title { 
+    font-size: 9rem; 
+    letter-spacing: 2rem;
+    padding: 0 1rem;
+  }
+  .heading {
+    font-size: 3rem;
+    margin: 3rem 0rem;
+  }
+  
+  .subheading { 
+    font-size: 6rem; 
+    top: 15%; 
+  }
+  
+  .subdetail { 
+    font-size: 1rem;
+    top: 25%; 
+    padding: 0 1rem;
+  }
 
-@media (min-width: 512px) {
-  .video-title { font-size:4rem; }
-}
+  .to-top {
+    padding: 0.6rem 1rem;
+    border-radius: 50%;
+  }
 
-@media (min-width: 768px) {
-  .src1 { gap: 2rem; margin: 4rem 0; }
-  .latest { width: 45%; }
-  .latest img { height: auto; aspect-ratio: 1/1; }
-  .product-name { font-size: 1.8rem; }
-  .nav-button { font-size: 1.4rem; height: 4rem; }
-  .subheading { font-size: 5rem; top: 10%; }
-  .subdetail { top: 22%; }
-  .suitsButton { height: 4rem; width: 15rem; font-size: 1.2rem; }
-  .main-footer-logo { font-size: 8.6rem; letter-spacing: 2rem; }
-}
+  .main-footer-logo {
+    font-size: 9rem;
+    letter-spacing: 6px;
+  }
 
-@media (min-width: 512px) {
-  a { font-size: 1.5rem; }
-  .latest img { height: 50rem; }
-  .subdetail { top: 30%; }
-  .linking { margin: 2rem; height: 4rem; width: 15rem; }
-} 
+  .linking {
+    font-size: 1.3rem;
+    margin: 0rem 2rem;
+    width: 20%;
+    height: 4rem;
+  }
 
-.products-details {
-  padding-top: 100px;
+  .product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    width: 100%;
+    max-width: 1920px;
+    gap:0;
+    padding: 6rem 10rem;
+    margin: 0 auto;
+    justify-content: center;
+    align-content: center;
+    align-items: start;
+    box-sizing: border-box;
+  }
+
+  .product-card {
+    display: flex;
+    flex-direction: column;
+    width: 40vh;
+    max-width: 360px;
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+    background: #111111;
+    cursor: pointer;
+    text-align: center;
+  }
+
+  .product-card img {
+    width: 40vh;
+    height: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    display: block;
+    margin: 0;
+    gap:0;
+  }
+
+  .product-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 1rem;
+    background: #000000;
+    border-top: 1px solid #222222;
+    width: 100%;
+    box-sizing: border-box;
+    font-size:1.3rem;
+  }
+
+  .product-name {
+    font-size: 1.1rem;
+    color: #ffffff;
+    margin: 0;
+    font-family: sans-serif;
+    text-align: left;
+  }
+
+  .price {
+    font-size: 1.4rem;
+    color: goldenrod;
+    margin: 0;
+    font-family: sans-serif;
+    text-align: right;
+    font-weight: bold;
+  }
+
+  .discrip {
+    padding:3rem 0rem;
+    font-size:1.2rem;
+  }
+
+  .src1 {
+    display: grid; 
+    grid-template-columns: repeat(2, max-content); 
+    grid-template-rows: 1fr;             
+    width: 100%;
+    gap: 0;                    
+    margin: 0;
+    text-align: center;
+    justify-content: center;   
+    align-items: start;       
+    background: #001d1400;
+    padding: 10rem;
+  }
+
+  .latest {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    cursor: pointer;
+    margin-bottom: 0;
+    padding: 0;
+    width: 30vw;               
+  }
+
+  .latest img {
+    width: 30vw;            
+    height: 50rem;             
+    object-fit: cover;        
+    display: block;           
+    margin: 0;
+  }
+
+  .footerheading { font-size: 2rem; }
+  .footercontent { font-size: 1.2rem; }
+  .footer-label { font-size: 1rem; }
+  .footer-link { font-size: 1.2rem; }
+  .copyright { font-size: 1rem; }
 }

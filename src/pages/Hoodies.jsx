@@ -27,7 +27,7 @@ function Hoodies() {
 >
                 <h1 className="title">Zyndico Hoodies</h1>
                 <p className="discrip">
-                    Crafted from a heavy-weight cotton blend, it offers that coveted boxy, oversized silhouette without feeling bulky. Whether you're hitting the city streets.
+                    Crafted from a heavy-weight cotton blend, it offers that coveted boxy, oversized silhouette without feeling bulky.
             </p>
             </div>
             <div className="product-grid">

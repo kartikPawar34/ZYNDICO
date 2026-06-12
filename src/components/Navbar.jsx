@@ -37,7 +37,7 @@ function Navbar() {
                     </div>
 
                     <Link to="/" className="logo-link" onClick={() => setIsOpen(false)}>
-                        <h1 className="logo1">ZYNDICO</h1>
+                        <h1 className="logo1" id='nav'>ZYNDICO</h1>
                     </Link>
                     <Link to="/Login" onClick={() => setIsOpen(false)}>
                         <div className='menu'>
