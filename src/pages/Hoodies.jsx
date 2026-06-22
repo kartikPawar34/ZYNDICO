@@ -1,18 +1,9 @@
-const importedImages = import.meta.glob("../assets/images/hoodies/*.jpg", { eager: true });
-
-const hoodieDetails = {
-    "1.jpg": { name: "Oversized Heavy Fleece", price: "Rs 3,200" },
-    "2.jpg": { name: "Streetwear Acid Wash", price: "Rs 3,500" },
-    // ... add more
-};
-
-const imageCollection = Object.entries(importedImages).map(([path, module], index) => {
-    const fileName = path.split('/').pop();
-    const details = hoodieDetails[fileName] || { name: "Essential Hoodie", price: "Rs 2,999" };
-    return { id: index, src: module.default, ...details };
-});
+import { products } from '../assets/assets'
 
 function Hoodies() {
+
+    const hoodies = products.filter(p => p.category === "hoodies");
+
     return (
         <>
            <div 
@@ -31,9 +22,9 @@ function Hoodies() {
             </p>
             </div>
             <div className="product-grid">
-                {imageCollection.map((item) => (
+                {hoodies.map((item) => (
                     <div key={item.id} className="product-card">
-                        <div className="image-wrapper"><img src={item.src} alt={item.name} /></div>
+                        <div className="image-wrapper"><img src={item.images[0]} alt={item.name} /></div>
                         <div className="product-info">
                             <h3>{item.name}</h3>
                             <p className="price">{item.price}</p>

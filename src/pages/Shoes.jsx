@@ -1,30 +1,10 @@
+import { products} from "../assets/assets";
 
-const importedImages = import.meta.glob("../assets/images/shoes/*.jpg", { eager: true });
-
-const shoeDetails = {
-    "1.jpg": { name: "Arctic White Trainers", price: "Rs 4,500" },
-    "2.jpg": { name: "Midnight Stealth Runners", price: "Rs 5,200" },
-    "3.jpg": { name: "Desert Suede Boots", price: "Rs 7,800" },
-    "4.jpg": { name: "Classic Street Lows", price: "Rs 3,900" },
-    "5.jpg": { name: "Infinity Sports Knit", price: "Rs 6,100" },
-    "6.jpg": { name: "Leather Heritage Brogues", price: "Rs 8,500" },
-    "7.jpg": { name: "Neon Flux Basketball", price: "Rs 9,200" },
-    "8.jpg": { name: "Urban Explorer Highs", price: "Rs 5,500" },
-};
-
-const imageCollection = Object.entries(importedImages).map(([path, module], index) => {
-    const fileName = path.split('/').pop(); 
-    const details = shoeDetails[fileName] || { name: "Premium Footwear", price: "Rs 4,999" };
-
-    return {
-        id: index,
-        src: module.default,
-        name: details.name,
-        price: details.price
-    };
-});
 
 function Shoes() {
+
+    const Shoes = products.filter(p => p.category === "shoes") ;
+
     return (
         <>
           <div 
@@ -45,10 +25,10 @@ function Shoes() {
             </div>
 
             <div className="product-grid">
-                {imageCollection.map((item) => (
+                {Shoes.map((item) => (
                     <div key={item.id} className="product-card">
                         <div className="image-wrapper">
-                            <img src={item.src} alt={item.name} />
+                            <img src={item.images[0]} alt={item.name} />
                         </div>
                         <div className="product-info">
                             <h3>{item.name}</h3>

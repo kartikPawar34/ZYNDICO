@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { products, videos } from "../assets/assets";
 import myVideo from "../assets/videos/intro.mp4";
 import shirt7 from "../assets/images/shirt/2.jpg";
 import shirt8 from "../assets/images/shirt/7.jpg";
@@ -10,11 +11,14 @@ import suit1 from "../assets/images/suit/4.png";
 import CategoryMarquee from "../components/Marq";
 
 function Home() {
+
+    const intriVideo = videos.intro_v
+
     return (
         <div className="home-container">
             <div className="video-wrapper">
                 <video autoPlay muted loop className="intro">
-                    <source src={myVideo} type="video/mp4" />
+                    <source src={intriVideo} type="video/mp4" />
                 </video>
                 <h1 className="video-title">ZYNDICO</h1>
             </div>

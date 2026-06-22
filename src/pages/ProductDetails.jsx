@@ -1,18 +1,6 @@
 import React, { useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
-
-const productDetailsMap = {
-    "1": { name: "Vintage Oversized Tee", price: 1200, category: "Casual", desc: "Engineered for the modern aesthetic. Features a relaxed drop-shoulder silhouette built from heavy-duty breathable cotton.", rawImg: "1.jpg" },
-    "2": { name: "Classic White Linen", price: 2500, category: "Casual", desc: "The quintessential warm-weather staple. Stay exceptionally cool with premium spun flax linen tailoring.", rawImg: "2.jpg" },
-    "3": { name: "Midnight Black Formal", price: 3200, category: "Formal", desc: "Command the room. A crisp, wrinkle-resistant luxury weave engineered to hold clean lines all through the night.", rawImg: "3.jpg" },
-    "4": { name: "Streetwear Graphic", price: 1800, category: "Casual", desc: "Bold, screen-printed graphic detailing met with high-grade durable knit fabric for structural longevity.", rawImg: "4.jpg" },
-    "5": { name: "Pastel Oxford", price: 2100, category: "Formal", desc: "A timeless Ivy-League smart casual icon. Breathable basketweave cotton that transitions perfectly from work to weekend.", rawImg: "5.jpg" },
-    "6": { name: "Denim Rugged", price: 4500, category: "Casual", desc: "Heavyweight utility denim washed for broken-in comfort right away. Double-stitched for uncompromising resilience.", rawImg: "6.jpg" },
-    "7": { name: "Cuban Collar", price: 1900, category: "Casual", desc: "Retro resort-wear refinement. Relaxed flat collar profile keeping you airy and effortless in sun-drenched settings.", rawImg: "7.jpg" },
-    "8": { name: "Premium Silk", price: 5000, category: "Highend", desc: "Ultimate high-end indulgence. Pure mulberry silk processing delivering uncompromised natural sheen and unparalleled skin feel.", rawImg: "8.jpg" },
-};
-
-const importedImages = import.meta.glob("../assets/images/shirt/*.jpg", { eager: true });
+import { products } from "../assets/assets";
 
 function ProductDetails() {
     const { id } = useParams();
@@ -21,7 +9,7 @@ function ProductDetails() {
     const [selectedSize, setSelectedSize] = useState("M");
     const [quantity, setQuantity] = useState(1);
 
-    const productInfo = productDetailsMap[id];
+    const productInfo = products.filter(p => p.id === id)[0];
 
     if (!productInfo) {
         return (
@@ -33,9 +21,6 @@ function ProductDetails() {
             </div>
         );
     }
-
-    const imagePathKey = `../assets/images/shirt/${productInfo.rawImg}`;
-    const productSrc = importedImages[imagePathKey]?.default || `https://images.unsplash.com/photo-1603252109303-2751441dd157?w=500`;
 
     const handleAddToCart = () => {
         alert(`🛒 Added to Cart:\n- Item: ${productInfo.name}\n- Size: ${selectedSize}\n- Qty: ${quantity}\n- Total: Rs ${(productInfo.price * quantity).toLocaleString()}`);
@@ -59,7 +44,7 @@ function ProductDetails() {
             <div className="details-image-panel" style={{ flex: "1 1 450px", display: "flex", justifyContent: "center", alignItems: "flex-start" }}>
                 <div style={{ border: "1px solid #eee", borderRadius: "8px", overflow: "hidden", width: "100%", backgroundColor: "#fcfcfc" }}>
                     <img 
-                        src={productSrc} 
+                        src={productInfo.images[0]} 
                         alt={productInfo.name} 
                         style={{ width: "100%", height: "auto", display: "block", objectFit: "cover", maxHeight: "600px" }} 
                     />
