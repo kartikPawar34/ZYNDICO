@@ -1,40 +1,21 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-
-const importedImages = import.meta.glob("../assets/images/shirt/*.jpg", { eager: true });
-
-const productDetails = {
-    "1.jpg": { name: "Vintage Oversized Tee", price: 1200, category: "Casual" },
-    "2.jpg": { name: "Classic White Linen", price: 2500, category: "Casual" },
-    "3.jpg": { name: "Midnight Black Formal", price: 3200, category: "Formal" },
-    "4.jpg": { name: "Streetwear Graphic", price: 1800, category: "Casual" },
-    "5.jpg": { name: "Pastel Oxford", price: 2100, category: "Formal" },
-    "6.jpg": { name: "Denim Rugged", price: 4500, category: "Casual" },
-    "7.jpg": { name: "Cuban Collar", price: 1900, category: "Casual" },
-    "8.jpg": { name: "Premium Silk", price: 5000, category: "Highend" },
-};
-
-const imageCollection = Object.entries(importedImages).map(([path, module]) => {
-    const fileName = path.split("/").pop(); // This gives "1.jpg", "2.jpg", etc.
-    const rawId = fileName.split(".")[0];   // This extracts just "1", "2", etc.
-    const details = productDetails[fileName] || { name: "New Arrival", price: 0, category: "Casual" };
-
-    return {
-        id: rawId, // Matches your ProductDetails dictionary keys perfectly
-        src: module.default,
-        name: details.name,
-        price: details.price,
-        category: details.category
-    };
-});
+import { products } from "../assets/assets";
 
 function Shirt() {
     const navigate = useNavigate();
     const [selectedCategory, setSelectedCategory] = useState("All");
+    
+    // ── get all shirts once ──
+    const shirts = products.filter(p => p.category === "shirts");
 
-    const filteredProducts = selectedCategory === "All" 
-        ? imageCollection 
-        : imageCollection.filter(item => item.category === selectedCategory);
+    // ── derive filtered list directly, no useState needed ──
+    const filteredProducts = () => {
+        if (selectedCategory === "Casual")  return shirts.filter(p => p.tags.includes("casual"));
+        if (selectedCategory === "Formal")  return shirts.filter(p => p.tags.includes("formal"));
+        if (selectedCategory === "Highend") return shirts.filter(p => p.tags.includes("office"));
+        return shirts; // "All"
+    };
 
     return (
         <>
@@ -76,7 +57,7 @@ function Shirt() {
             </div>
 
             <div className="product-grid">
-                {filteredProducts.map((item) => (
+                {filteredProducts().map((item) => (
                     <div 
                         key={item.id} 
                         className="product-card" 
@@ -84,7 +65,7 @@ function Shirt() {
                         style={{ cursor: 'pointer' }}
                     >
                         <div className="image-wrapper">
-                            <img src={item.src} alt={item.name} />
+                            <img src={item.images[0]} alt={item.name} />
                         </div>
                         <div className="product-info">
                             <h3>{item.name}</h3>

@@ -1,17 +1,9 @@
-const importedImages = import.meta.glob("../assets/images/sneaker/*.jpg", { eager: true });
-
-const sneakDetails = {
-    "1.jpg": { name: "Phantom Low-Top", price: "Rs 5,500" },
-    "2.jpg": { name: "Retro Court White", price: "Rs 4,800" },
-};
-
-const imageCollection = Object.entries(importedImages).map(([path, module], index) => {
-    const fileName = path.split('/').pop();
-    const details = sneakDetails[fileName] || { name: "Limited Edition", price: "Rs 6,500" };
-    return { id: index, src: module.default, ...details };
-});
+import { products } from "../assets/assets";
 
 function Sneaker() {
+
+    const Sneakers = products.filter(p => p.category === "sneakers") 
+
     return (
         <>
           <div 
@@ -29,9 +21,9 @@ function Sneaker() {
                 <p className="discrip">Designed for men who move seamlessly from boardroom to street, combining comfort with modern style.Comfort engineered for the pace of today, blending sharp design with effortless wearability.</p>
             </div>
             <div className="product-grid">
-                {imageCollection.map((item) => (
+                {Sneakers.map((item) => (
                     <div key={item.id} className="product-card">
-                        <div className="image-wrapper"><img src={item.src} alt={item.name} /></div>
+                        <div className="image-wrapper"><img src={item.images[0]} alt={item.name} /></div>
                         <div className="product-info">
                             <h3>{item.name}</h3>
                             <p className="price">{item.price}</p>
